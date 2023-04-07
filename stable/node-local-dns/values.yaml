@@ -31,6 +31,14 @@ serviceMonitor:
   # Ensure that servicemonitor is created
   enabled: false
 
+dashboard:
+  enabled: false
+  # namespace where grafana sidecar is configured to look for dashboards. e.g. "monitoring"
+  namespace: ""
+  # label that grafana dashboard is configured to look for. e.g. "grafana_dashboard"
+  label: ""
+  annotations: {}
+
 resources:
   requests:
     cpu: 25m
