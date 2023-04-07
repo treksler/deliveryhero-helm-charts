@@ -26,6 +26,11 @@ serviceAccount:
 
 podAnnotations: {}
 
+# https://github.com/prometheus-operator/prometheus-operator/blob/main/Documentation/user-guides/getting-started.md
+serviceMonitor:
+  # Enusre that servicemonitor is created
+  enabled: false
+
 resources:
   requests:
     cpu: 25m
