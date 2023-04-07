@@ -14,8 +14,7 @@ metadata:
     grafana_dashboard: "1"
     {{- end }}
   annotations:
-    {{- toYaml $.Values.dashboard.annotations | nindent 4 }}
-    {{- with $.Values.podAnnotations }}
+    {{- with $.Values.dashboard.annotations }}
       {{- toYaml . | nindent 4 }}
     {{- end }}
 data:
