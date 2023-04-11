@@ -5,13 +5,13 @@ image:
 
 config:
   # Internal k8s internal domain
-  pillarDnsDomain: "cluster.local"
+  dnsDomain: "cluster.local"
 
   # Main coredns service (kube-dns) ip, used on iptables-mode.
-  pillarDnsServer: "172.20.0.10"
+  dnsServer: "172.20.0.10"
 
   # Virtual IP to be used by ipvs mode, to be used as --cluster-dns, must not collide.
-  pillarLocalDns: "169.254.20.25"
+  localDns: "169.254.20.25"
 
 nameOverride: ""
 fullnameOverride: ""
