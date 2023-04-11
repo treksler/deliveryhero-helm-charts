@@ -49,6 +49,10 @@ helm install my-release deliveryhero/node-local-dns -f values.yaml
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
+| dashboard.annotations | object | `{}` |  |
+| dashboard.enabled | bool | `false` |  |
+| dashboard.label | string | `"grafana_dashboard"` |  |
+| dashboard.namespace | string | `"kube-system"` |  |
 | fullnameOverride | string | `""` |  |
 | image.repository | string | `"registry.k8s.io/dns/k8s-dns-node-cache"` |  |
 | image.tag | string | `""` |  |
@@ -63,6 +67,8 @@ helm install my-release deliveryhero/node-local-dns -f values.yaml
 | serviceAccount.annotations | object | `{}` |  |
 | serviceAccount.create | bool | `true` |  |
 | serviceAccount.name | string | `""` |  |
+| serviceMonitor.enabled | bool | `false` |  |
+
 
 ## Maintainers
 
