@@ -49,6 +49,9 @@ helm install my-release deliveryhero/node-local-dns -f values.yaml
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
+| config.pillarDnsDomain | string | `"cluster.local"` |  |
+| config.pillarDnsServer | string | `"172.20.0.10"` |  |
+| config.pillarLocalDns | string | `"169.254.20.25"` |  |
 | dashboard.annotations | object | `{}` |  |
 | dashboard.enabled | bool | `false` |  |
 | dashboard.label | string | `"grafana_dashboard"` |  |
@@ -58,9 +61,6 @@ helm install my-release deliveryhero/node-local-dns -f values.yaml
 | image.tag | string | `""` |  |
 | imagePullSecrets | list | `[]` |  |
 | nameOverride | string | `""` |  |
-| pillar_dns_domain | string | `"cluster.local"` |  |
-| pillar_dns_server | string | `"172.20.0.10"` |  |
-| pillar_local_dns | string | `"169.254.20.25"` |  |
 | podAnnotations | object | `{}` |  |
 | resources.limits.memory | string | `"128Mi"` |  |
 | resources.requests.cpu | string | `"25m"` |  |
