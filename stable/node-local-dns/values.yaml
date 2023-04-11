@@ -47,3 +47,6 @@ resources:
     memory: 128Mi
 
 affinity: {}
+
+# imagePullSecrets:
+# - name: "image-pull-secret"
