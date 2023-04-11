@@ -4,7 +4,7 @@ image:
   tag: ""
 
 config:
-  # Internal k8s internal domain
+  # Internal k8s DNS domain
   dnsDomain: "cluster.local"
 
   # Main coredns service (kube-dns) ip, used on iptables-mode.
