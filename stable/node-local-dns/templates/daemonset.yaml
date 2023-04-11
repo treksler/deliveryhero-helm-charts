@@ -46,7 +46,7 @@ spec:
         {{- with .Values.resources }}
         resources: {{- toYaml . | nindent 10 }}
         {{- end }}
-        args: [ "-localip", "{{ .Values.pillar_local_dns }},{{ .Values.pillar_dns_server }}", "-conf", "/etc/Corefile", "-upstreamsvc", "{{ include "node-local-dns.fullname" . }}-upstream" ]
+        args: [ "-localip", "{{ .Values.config.pillarLocalDns }},{{ .Values.config.pillarDnsServer }}", "-conf", "/etc/Corefile", "-upstreamsvc", "{{ include "node-local-dns.fullname" . }}-upstream" ]
         securityContext:
           privileged: true
         ports:
@@ -61,7 +61,7 @@ spec:
           protocol: TCP
         livenessProbe:
           httpGet:
-            host: {{ .Values.pillar_local_dns }}
+            host: {{ .Values.config.pillarLocalDns }}
             path: /health
             port: 8080
           initialDelaySeconds: 60
