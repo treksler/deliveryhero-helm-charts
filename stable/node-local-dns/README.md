@@ -56,6 +56,7 @@ helm install my-release deliveryhero/node-local-dns -f values.yaml
 | fullnameOverride | string | `""` |  |
 | image.repository | string | `"registry.k8s.io/dns/k8s-dns-node-cache"` |  |
 | image.tag | string | `""` |  |
+| imagePullSecrets | list | `[]` |  |
 | nameOverride | string | `""` |  |
 | pillar_dns_domain | string | `"cluster.local"` |  |
 | pillar_dns_server | string | `"172.20.0.10"` |  |
