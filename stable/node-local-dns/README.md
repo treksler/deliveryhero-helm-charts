@@ -49,9 +49,9 @@ helm install my-release deliveryhero/node-local-dns -f values.yaml
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
-| config.pillarDnsDomain | string | `"cluster.local"` |  |
-| config.pillarDnsServer | string | `"172.20.0.10"` |  |
-| config.pillarLocalDns | string | `"169.254.20.25"` |  |
+| config.dnsDomain | string | `"cluster.local"` |  |
+| config.dnsServer | string | `"172.20.0.10"` |  |
+| config.localDns | string | `"169.254.20.25"` |  |
 | dashboard.annotations | object | `{}` |  |
 | dashboard.enabled | bool | `false` |  |
 | dashboard.label | string | `"grafana_dashboard"` |  |
