@@ -18,6 +18,6 @@ metadata:
       {{- toYaml . | nindent 4 }}
     {{- end }}
 data:
-  {{ include "node-local-dns.fullname" . }}-dashboard.yaml: |-
+  {{ include "node-local-dns.fullname" . }}-dashboard.json: |-
     {{- .Files.Get "dashboard.json" | nindent 4 }}
 {{- end -}}
