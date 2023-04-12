@@ -50,5 +50,5 @@ resources:
 
 affinity: {}
 
-# imagePullSecrets:
+imagePullSecrets: []
 # - name: "image-pull-secret"
